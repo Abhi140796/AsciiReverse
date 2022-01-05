@@ -6,6 +6,11 @@ namespace AsciiReverse
 {
     class StringReverseFunctions : IStringReverse
     {
+        /// <summary>
+        /// Check Weather The Given Number Is Prime Or Not
+        /// </summary>
+        /// <param name="wholeNumber">Whole Number</param>
+        /// <returns>Bool Value True If It Is Prime And False If Not</returns>
         public bool IsPrimeNumber(int wholeNumber)
         {
             if(wholeNumber % 2 != 0 && wholeNumber % 3 != 0 && wholeNumber % 5 != 0)
