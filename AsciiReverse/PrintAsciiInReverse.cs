@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AsciiReverse
+﻿namespace AsciiReverse
 {
     class PrintAsciiInReverse
     {

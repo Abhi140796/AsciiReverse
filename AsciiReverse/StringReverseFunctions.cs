@@ -1,11 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AsciiReverse
 {
     class StringReverseFunctions : IStringReverse
     {
+
+        private string notAPrime = "Not a prime number";
+
         /// <summary>
         /// Check Weather The Given Number Is Prime Or Not
         /// </summary>
@@ -43,12 +44,12 @@ namespace AsciiReverse
                     asciiNumber = asciiNumber / 10;
                 }
 
-                Console.WriteLine(number);
+                Console.WriteLine("{0}{1,18}",number,"|");
             }
 
             else
             {
-                Console.WriteLine("Not a prime number");
+                Console.WriteLine("{0}{1,2}",notAPrime,"|");
             }
   
         }
@@ -66,11 +67,23 @@ namespace AsciiReverse
             char[] wordArray = word.ToCharArray();
 
             Console.WriteLine("");
+            Console.WriteLine("{0,-15}{1,-5}{2,-5}","Characters","|","Prime/Not Prime");
+            for(int i = 0; i < 40; i++)
+            {
+                Console.Write("_");
+            }
+
+            Console.WriteLine();
 
             foreach (var element in wordArray)
             {
-                Console.Write("{0,-10}: ",element);
+                Console.Write("{0,-10}{1,-5}{2,-5}", "|",element,"|");
                 ReverseAcii((int)element);
+            }
+
+            for (int i = 0; i < 40; i++)
+            {
+                Console.Write("_");
             }
         }
     }
