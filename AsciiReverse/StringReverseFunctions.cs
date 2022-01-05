@@ -13,7 +13,7 @@ namespace AsciiReverse
         /// <returns>Bool Value True If It Is Prime And False If Not</returns>
         public bool IsPrimeNumber(int wholeNumber)
         {
-            if(wholeNumber % 2 != 0 && wholeNumber % 3 != 0 && wholeNumber % 5 != 0)
+            if (wholeNumber % 2 != 0 && wholeNumber % 3 != 0 && wholeNumber % 5 != 0)
             {
                 return true;
             }
@@ -31,7 +31,9 @@ namespace AsciiReverse
         public void ReverseAcii(int asciiNumber)
         {
             int number = 0;
+
             bool isAsciiNumberIsPrime = IsPrimeNumber(asciiNumber);
+
             if(isAsciiNumberIsPrime)
             {
                 while (asciiNumber != 0)
@@ -43,6 +45,7 @@ namespace AsciiReverse
 
                 Console.WriteLine(number);
             }
+
             else
             {
                 Console.WriteLine("Not a prime number");
@@ -57,8 +60,13 @@ namespace AsciiReverse
         public void StringToReverseAscii()
         {
             Console.WriteLine("Enter a String");
+
             string word = Console.ReadLine();
+            
             char[] wordArray = word.ToCharArray();
+
+            Console.WriteLine("");
+
             foreach (var element in wordArray)
             {
                 Console.Write("{0,-10}: ",element);
